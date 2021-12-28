@@ -5,8 +5,7 @@ pipeline {
                  steps {
                     echo "========== start buildung ==========" 
                     dir ('./') {
-                    sh "yarn"
-                    sh "yarn build"
+                        sh "docker build ."
                 }
             }
         }   
