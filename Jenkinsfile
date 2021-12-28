@@ -1,9 +1,12 @@
 pipeline {
     agent any
       stages {
-             stage('Build') {
+             stage('docker image') {
                  steps {
-                      sh 'src/index.js'
+                    echo "========== start buildung ==========" 
+                    dir ('./') {
+                    sh 'docker build .'
+                    }
                  }
              }   
              }
