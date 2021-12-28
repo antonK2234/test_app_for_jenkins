@@ -1,8 +1,12 @@
 pipeline {
   agent any
-  stages {
-      stage("docker build") {
-          steps {'yarn install'}
-      }
+    stages {
+      script {
+        shell('copy-version-properties-file') {
+          cmd('''
+            docker build -t test2 ./
+            ''')
+        }
+    }
   }
 }
