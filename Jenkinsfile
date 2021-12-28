@@ -1,8 +1,8 @@
 pipeline {
   agent any
   stages {
-      stage("docker build ./") {
-          steps {' docker build ./ '}
+      stage("docker build") {
+          steps {'docker build -t test ./'}
       }
   }
 }
