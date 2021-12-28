@@ -5,7 +5,7 @@ pipeline {
                  steps {
                     echo "========== start buildung ==========" 
                     dir ('./') {
-                    sh "yarn install"
+                    sh "yarn.lock install"
                 }
             }
         }   
