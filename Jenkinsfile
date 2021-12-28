@@ -4,7 +4,7 @@ pipeline {
              stage('docker image') {
                  steps {
                     echo "========== start buildung ==========" 
-                    // dir ('./') {
+                    dir ('./') {
                     sh "yarn install"
                 }
             }
