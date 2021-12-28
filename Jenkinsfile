@@ -1,13 +1,13 @@
 pipeline {
-    agent { docker { image 'docker' } }
+    agent any
       stages {
              stage('docker image') {
                  steps {
                     echo "========== start buildung ==========" 
-                    dir ('./') {
-                    sh 'docker build .'
-                    }
-                 }
-             }   
-             }
+                    // dir ('./') {
+                    sh "yarn install"
+                }
+            }
+        }   
+    }
 }
