@@ -1,9 +1,9 @@
 pipeline {
     agent any
       stages {
-             stage('Build docker image') {
+             stage('Build') {
                  steps {
-                     sh 'yarn install'
+                      echo 'Переносим код в рабочую среду или создаем артефакт'
                  }
              }   
              }
