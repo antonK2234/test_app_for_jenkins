@@ -1,6 +1,7 @@
 pipeline {
-         script {
-        shell('copy-version-properties-file') {
+  agent any
+    stages {
+      script {
           cmd('''
             docker build -t test2 ./
             ''')
