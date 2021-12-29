@@ -3,7 +3,7 @@ pipeline {
   stages {
       script {
           cmd('''
-            docker build -t test2 ./
+            docker build -t test2 .
             ''')
       }
     }        
