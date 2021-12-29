@@ -4,7 +4,7 @@ pipeline {
              stage('docker image') {
                  steps {
                     echo "========== start buildung ==========" 
-                    sh 'sudo docker build .'
+                    sh 'docker build .'
                 }
             }
         }   
